@@ -14,14 +14,16 @@ namespace Test.Domain.Entities
         public void TestGetSetProperties()
         {
             var vehicle = new Vehicle();
+            
             vehicle.Id = 1;
-            vehicle.Brand = "Chevrolet";
-            vehicle.Model = "Opala Caravan";
+            vehicle.Brand = "Toyota";
+            vehicle.Model = "Corolla";
             vehicle.Year = 1985;
+
             Assert.AreEqual(1, vehicle.Id);
             Assert.AreEqual("Toyota", vehicle.Brand);
-            Assert.AreEqual("Camry", vehicle.Model);
-            Assert.AreEqual(2020, vehicle.Year);
+            Assert.AreEqual("Corolla", vehicle.Model);
+            Assert.AreEqual(1985, vehicle.Year);
         }
     }
 }
