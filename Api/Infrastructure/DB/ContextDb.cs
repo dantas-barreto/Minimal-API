@@ -12,6 +12,10 @@ public class ContextDb : DbContext
         _configurationAppSettings = configurationAppSettings;
     }
 
+    public ContextDb(DbContextOptions<ContextDb> options) : base(options)
+    {
+    }
+
     public DbSet<Administrator> Administrators { get; set; } = default!;
     public DbSet<Vehicle> Vehicles { get; set; } = default!;
 
