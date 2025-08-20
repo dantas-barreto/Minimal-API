@@ -33,6 +33,12 @@ namespace Test.Domain.Services
 
             administratorService.Add(admin);
 
+            var admins = context.Administrators.ToList();
+            foreach (var a in admins)
+            {
+                Console.WriteLine($"{a.Id} | {a.Email} | {a.Password} | {a.Profile}");
+            }
+
             Assert.AreEqual(1, administratorService.GetAll(1).Count());
         }
     }
