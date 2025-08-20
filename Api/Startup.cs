@@ -139,7 +139,7 @@ public class Startup
                     {
                         Email = adm.Email,
                         Profile = adm.Profile,
-                        token = token
+                        Token = token
                     });
                 }
                 else
